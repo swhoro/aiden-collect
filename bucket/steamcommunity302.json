@@ -3,7 +3,7 @@
     "description": "Fix the problem that some countries/regions cannot enter steam community and some other websites.",
     "homepage": "https://www.dogfight360.com/blog/686/",
     "license": "Unknown",
-    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2024/02/steamcommunity_302_V12.1.35_解压密码dogfight360.zip#dl.zip_",
+    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2024/02/steamcommunity_302_V12.1.35_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_",
     "hash": "bd250e5b81901f15c203e98e387ce5aaaaaca83e5313658f14ebbc2dc37e85ec",
     "shortcuts": [
         [
@@ -30,6 +30,6 @@
         "regex": "<a href=\"https://www\\.dogfight360\\.com/blog/wp-content/uploads/(?<year>\\d+)/(?<month>\\d+)/steamcommunity_302_V(?<version>[\\d\\.]+)_解压密码dogfight360\\.zip\" target=\"_blank\" rel=\"noreferrer noopener\">steamcommunity_302_V[\\d\\.]+_解压密码dogfight360</a>"
     },
     "autoupdate": {
-        "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchYear/$matchMonth/steamcommunity_302_V$version_解压密码dogfight360.zip#dl.zip_"
+        "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchYear/$matchMonth/steamcommunity_302_V$version_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_"
     }
 }

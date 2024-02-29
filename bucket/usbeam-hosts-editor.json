@@ -1,0 +1,37 @@
+{
+    "version": "3.63",
+    "description": "Modify hosts with buit-in rules.",
+    "homepage": "https://www.dogfight360.com/blog/475/",
+    "license": "Unknown",
+    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2022/06/UsbEAm-Hosts-Editor-v3.63_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_",
+    "hash": "618f2f9a7c87137d015df2c486662fb3b221a06e92bfd0bb9a128354c69711bb",
+    "shortcuts": [
+        [
+            "UsbEAm Hosts Editor v3.63.exe",
+            "UsbEAm Hosts Editor"
+        ]
+    ],
+    "installer": {
+        "script": [
+            "$zip=(Get-ChildItem $dir\\UsbEAm-Hosts-Editor*).Name",
+            "7z x \"$dir\\$zip\" -pdogfight360 -o\"$dir\" | Out-Null",
+            "Remove-Item \"$dir\\$zip\" -Force",
+            "$ddir=(Get-ChildItem $dir\\UsbEAm Hosts Editor).Name",
+            "Move-Item \"$dir\\$ddir\\*\" \"$dir\"",
+            "Remove-Item \"$dir\\$ddir\" -Recurse"
+        ]
+    },
+    "checkver": {
+        "url": "https://www.dogfight360.com/blog/475/",
+        "regex": "href=\"https://www\\.dogfight360\\.com/blog/wp-content/uploads/(?<year>\\d+)/(?<month>\\d+)/UsbEAm-Hosts-Editor-v(?<version>[\\d\\.]+)_解压密码dogfight360\\.zip\">"
+    },
+    "autoupdate": {
+        "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchYear/$matchMonth/UsbEAm-Hosts-Editor-v$version_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_",
+        "shortcuts": [
+            [
+                "UsbEAm Hosts Editor v$version.exe",
+                "UsbEAm Hosts Editor"
+            ]
+        ]
+    }
+}

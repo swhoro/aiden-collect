@@ -16,9 +16,8 @@
             "$zip=(Get-ChildItem $dir\\UsbEAm-Hosts-Editor*).Name",
             "7z x \"$dir\\$zip\" -pdogfight360 -o\"$dir\" | Out-Null",
             "Remove-Item \"$dir\\$zip\" -Force",
-            "$ddir=(Get-ChildItem $dir\\UsbEAm Hosts Editor).Name",
-            "Move-Item \"$dir\\$ddir\\*\" \"$dir\"",
-            "Remove-Item \"$dir\\$ddir\" -Recurse"
+            "Move-Item \"$dir\\UsbEAm Hosts Editor\\*\" \"$dir\"",
+            "Remove-Item \"$dir\\UsbEAm Hosts Editor\" -Recurse"
         ]
     },
     "checkver": {

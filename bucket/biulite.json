@@ -10,6 +10,14 @@
             "Biu"
         ]
     ],
+    "persist": "cache",
+    "installer": {
+        "script": [
+            "Move-Item \"$dir\\Biu Lite\\*\" \"$dir\"",
+            "Remove-Item \"$dir\\Biu Lite\" -Force -Recurse",
+            "New-Item -Path \"$dir\" -Name cache -ItemType Directory"
+        ]
+    },
     "checkver": {
         "url": "https://biu.moe/Index/client",
         "regex": "Biu Lite 客户端 当前版本：(\\d+)"

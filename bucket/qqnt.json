@@ -1,5 +1,5 @@
 {
-    "version": "9.9.9_240410",
+    "version": "9.9.9_240412",
     "description": "An instant messaging tool that gives you the best way to keep in touch with your friends and family.",
     "homepage": "https://im.qq.com",
     "license": {
@@ -11,8 +11,8 @@
         "'%UserProfile%\\Documents\\Tencent Files'.",
         "Files produced at runtime are left in '%AppData%\\Tencent'."
     ],
-    "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.9_240410_x64_01.exe#/dl.7z",
-    "hash": "ba27965d9379390ac23bf90319add823ccefc801fce6da3a77a12629e8a01475",
+    "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.9_240412_x64_01.exe#/dl.7z",
+    "hash": "2c0ca20124531a3ddf2213ba488c0faae52d3f3dfac32b3ecc6b533dddd9def2",
     "shortcuts": [
         [
             "QQ.exe",

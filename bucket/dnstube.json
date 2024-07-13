@@ -15,7 +15,8 @@
     },
     "shortcuts": [
         [
-            "DnsTube.Service.exe"
+            "DnsTube.Service.exe",
+            "DnsTube"
         ]
     ],
     "checkver": "github",

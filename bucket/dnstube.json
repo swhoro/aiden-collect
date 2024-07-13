@@ -20,6 +20,8 @@
         ]
     ],
     "checkver": "github",
+    "post_install": "sudo cmd /c $dir\\install-service.bat",
+    "pre_uninstall": "sudo cmd /c $dir\\uninstall-service.bat",
     "autoupdate": {
         "architecture": {
             "64bit": {

@@ -1,10 +1,10 @@
 {
-    "version": "12.1.41",
+    "version": "12.1.42",
     "description": "Fix the problem that some countries/regions cannot enter steam community and some other websites.",
     "homepage": "https://www.dogfight360.com/blog/686/",
     "license": "Unknown",
-    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2024/07/steamcommunity_302_V12.1.41_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_",
-    "hash": "e88ce674452f7b208d3ea4bcc20e96892a1016d1674220b15489243b93554ed8",
+    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2024/09/steamcommunity_302_V12.1.42_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_",
+    "hash": "fb7a5a005a70a0fb4db4f206fc933efa02ea58975d86c006dc2c8311f7f4cc78",
     "shortcuts": [
         [
             "steamcommunity_302.exe",

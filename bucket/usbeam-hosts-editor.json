@@ -1,34 +1,26 @@
 {
-    "version": "3.63",
+    "version": "4.0.1",
     "description": "Modify hosts with buit-in rules.",
-    "homepage": "https://www.dogfight360.com/blog/475/",
+    "homepage": "https://www.dogfight360.com/blog/18627/",
     "license": "Unknown",
-    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2022/06/UsbEAm-Hosts-Editor-v3.63_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_",
-    "hash": "618f2f9a7c87137d015df2c486662fb3b221a06e92bfd0bb9a128354c69711bb",
+    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2025/02/UsbEAm_Hosts_Editor_V4.0.1.zip",
+    "hash": "969d4c3b8f079a82937834ec31380d65e5fe7e5356e4650ddc5495229d56cb8f",
     "shortcuts": [
         [
-            "UsbEAm Hosts Editor v3.63.exe",
+            "UsbEAm Hosts Editor.exe",
             "UsbEAm Hosts Editor"
         ]
     ],
-    "installer": {
-        "script": [
-            "$zip=(Get-ChildItem $dir\\UsbEAm-Hosts-Editor*).Name",
-            "7z x \"$dir\\$zip\" -pdogfight360 -o\"$dir\" | Out-Null",
-            "Remove-Item \"$dir\\$zip\" -Force",
-            "Move-Item \"$dir\\UsbEAm Hosts Editor\\*\" \"$dir\"",
-            "Remove-Item \"$dir\\UsbEAm Hosts Editor\" -Recurse"
-        ]
-    },
+    "extract_dir": "UsbEAm Hosts Editor",
     "checkver": {
-        "url": "https://www.dogfight360.com/blog/475/",
-        "regex": "href=\"https://www\\.dogfight360\\.com/blog/wp-content/uploads/(?<year>\\d+)/(?<month>\\d+)/UsbEAm-Hosts-Editor-v(?<version>[\\d\\.]+)_解压密码dogfight360\\.zip\">"
+        "url": "https://www.dogfight360.com/blog/18627/",
+        "regex": "href=\"https://www\\.dogfight360\\.com/blog/wp-content/uploads/(?<year>\\d+)/(?<month>\\d+)/UsbEAm_Hosts_Editor_V(?<version>[\\d\\.]+)\\.zip\""
     },
     "autoupdate": {
-        "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchYear/$matchMonth/UsbEAm-Hosts-Editor-v$version_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_",
+        "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchYear/$matchMonth/UsbEAm_Hosts_Editor_V$version.zip",
         "shortcuts": [
             [
-                "UsbEAm Hosts Editor v$version.exe",
+                "UsbEAm Hosts Editor.exe",
                 "UsbEAm Hosts Editor"
             ]
         ]

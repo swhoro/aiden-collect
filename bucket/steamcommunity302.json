@@ -1,33 +1,24 @@
 {
-    "version": "12.1.46",
+    "version": "13.0.00",
     "description": "Fix the problem that some countries/regions cannot enter steam community and some other websites.",
-    "homepage": "https://www.dogfight360.com/blog/686/",
+    "homepage": "https://www.dogfight360.com/blog/18682/",
     "license": "Unknown",
-    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2024/11/steamcommunity_302_V12.1.46_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_",
-    "hash": "17563dc71acc33823cec4344e18ca3d129c39b032bb348a63b701fe4d29f80e6",
+    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2025/02/steamcommunity_302_V13.0.00.zip",
+    "hash": "42f10030e565b6b3fe4e681e0ada875149138dfb277f0c9c0618671d204b07ec",
     "shortcuts": [
         [
-            "steamcommunity_302.exe",
+            "Steamcommunity_302.exe",
             "steamcommunity 302"
         ]
     ],
     "persist": "S302.ini",
-    "installer": {
-        "script": [
-            "$zip=(Get-ChildItem $dir\\steamcommunity_302_*).Name",
-            "7z x \"$dir\\$zip\" -pdogfight360 -o\"$dir\" | Out-Null",
-            "Remove-Item \"$dir\\$zip\" -Force",
-            "$ddir=(Get-ChildItem $dir\\steamcommunity_302_*).Name",
-            "Move-Item \"$dir\\$ddir\\steamcommunity_302\\*\" \"$dir\"",
-            "Remove-Item \"$dir\\$ddir\" -Recurse",
-            "New-Item $dir\\S302.ini -itemtype file | Out-Null"
-        ]
-    },
+    "extract_dir": "steamcommunity_302_V13.0.00/Steamcommunity_302",
     "checkver": {
-        "url": "https://www.dogfight360.com/blog/686/",
-        "regex": "<a href=\"https://www\\.dogfight360\\.com/blog/wp-content/uploads/(?<year>\\d+)/(?<month>\\d+)/steamcommunity_302_V(?<version>[\\d\\.]+)_解压密码dogfight360\\.zip\" target=\"_blank\" rel=\"noreferrer noopener\">steamcommunity_302_V[\\d\\.]+_解压密码dogfight360</a>"
+        "url": "https://www.dogfight360.com/blog/18682/",
+        "regex": "<a href=\"https://www\\.dogfight360\\.com/blog/wp-content/uploads/(?<year>\\d+)/(?<month>\\d+)/steamcommunity_302_V(?<version>[\\d\\.]+)\\.zip\""
     },
     "autoupdate": {
-        "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchYear/$matchMonth/steamcommunity_302_V$version_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#dl.zip_"
+        "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchYear/$matchMonth/steamcommunity_302_V$version.zip",
+        "extract_dir": "steamcommunity_302_V$version/Steamcommunity_302"
     }
 }

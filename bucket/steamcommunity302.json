@@ -4,7 +4,7 @@
     "homepage": "https://www.dogfight360.com/blog/18682/",
     "license": "Unknown",
     "url": "https://www.dogfight360.com/blog/wp-content/uploads/2025/03/steamcommunity_302_V13.0.02.zip",
-    "hash": "0c1be381ae8c5dd5e82eac29c45b5f03341a4c4838aebaf6f1fa55f9ee13d592",
+    "hash": "md5:5397413bf9512332b6d933551a912063",
     "shortcuts": [
         [
             "Steamcommunity_302.exe",
@@ -13,15 +13,17 @@
     ],
     "persist": "S302.ini",
     "extract_dir": "steamcommunity_302_V13.0.02/Steamcommunity_302",
-    "pre_install": [
-        "New-Item -Path (Join-Path -Path $dir -ChildPath S302.ini) -ItemType File -ErrorAction SilentlyContinue | Out-Null"
-    ],
+    "pre_install": "New-Item -Path (Join-Path -Path $dir -ChildPath S302.ini) -ItemType File -ErrorAction SilentlyContinue | Out-Null",
     "checkver": {
         "url": "https://www.dogfight360.com/blog/18682/",
         "regex": "<a href=\"https://www\\.dogfight360\\.com/blog/wp-content/uploads/(?<year>\\d+)/(?<month>\\d+)/steamcommunity_302_V(?<version>[\\d\\.]+)\\.zip\""
     },
     "autoupdate": {
         "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchYear/$matchMonth/steamcommunity_302_V$version.zip",
-        "extract_dir": "steamcommunity_302_V$version/Steamcommunity_302"
+        "extract_dir": "steamcommunity_302_V$version/Steamcommunity_302",
+        "hash": {
+            "url": "https://www.dogfight360.com/blog/18682/",
+            "find": "$md5 $basename"
+        }
     }
 }

@@ -4,7 +4,7 @@
     "homepage": "https://www.dogfight360.com/blog/18627/",
     "license": "Unknown",
     "url": "https://www.dogfight360.com/blog/wp-content/uploads/2025/02/UsbEAm_Hosts_Editor_V4.0.1.zip",
-    "hash": "969d4c3b8f079a82937834ec31380d65e5fe7e5356e4650ddc5495229d56cb8f",
+    "hash": "md5:0e4c176cd14f67183d6f64521f0ecb0b",
     "shortcuts": [
         [
             "UsbEAm Hosts Editor.exe",
@@ -23,6 +23,10 @@
                 "UsbEAm Hosts Editor.exe",
                 "UsbEAm Hosts Editor"
             ]
-        ]
+        ],
+        "hash": {
+            "url": "https://www.dogfight360.com/blog/18627/",
+            "find": "$md5 $basename"
+        }
     }
 }

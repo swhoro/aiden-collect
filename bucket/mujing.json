@@ -2,7 +2,7 @@
     "version": "2.9.1",
     "description": "Learning English words through movies, TV series, and documents.",
     "homepage": "https://github.com/tangshimin/MuJing",
-    "license": "MIT",
+    "license": "GPL-3.0",
     "url": "https://github.com/tangshimin/MuJing/releases/download/v2.9.1/MuJing-2.9.1.zip",
     "hash": "ccef8e4507c7240e596e250020879379313ec7b735dc402bce03b94fab741e44",
     "extract_dir": "MuJing",

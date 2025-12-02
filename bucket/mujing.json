@@ -1,10 +1,10 @@
 {
-    "version": "2.9.1",
+    "version": "2.12.3",
     "description": "Learning English words through movies, TV series, and documents.",
     "homepage": "https://github.com/tangshimin/MuJing",
     "license": "GPL-3.0",
-    "url": "https://github.com/tangshimin/MuJing/releases/download/v2.9.1/MuJing-2.9.1.zip",
-    "hash": "ccef8e4507c7240e596e250020879379313ec7b735dc402bce03b94fab741e44",
+    "url": "https://github.com/tangshimin/MuJing/releases/download/v2.12.3/MuJing-2.12.3.zip",
+    "hash": "8ecc9dbdbbc0fc0c8c2747d1ef47170cbee1e8f908bca4eebca75a8e9e66ee62",
     "extract_dir": "MuJing",
     "shortcuts": [
         [

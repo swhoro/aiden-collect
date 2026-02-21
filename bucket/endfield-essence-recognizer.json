@@ -11,6 +11,7 @@
             "Endfield Essence Recognizer"
         ]
     ],
+    "persist": "config.json",
     "pre_install": "New-Item -Path (Join-Path -Path $dir -ChildPath config.json) -ItemType File -ErrorAction SilentlyContinue | Out-Null",
     "checkver": "github",
     "autoupdate": {

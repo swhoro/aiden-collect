@@ -1,10 +1,10 @@
 {
-    "version": "0.7.0",
+    "version": "0.8.0",
     "description": "不知道哪些基质该留哪些该扔？逝逝这个终末地基质妙妙小工具吧！",
     "homepage": "https://github.com/Logical-Byte/endfield-essence-recognizer",
     "license": "AGPL-3.0",
-    "url": "https://github.com/Logical-Byte/endfield-essence-recognizer/releases/download/v0.7.0/endfield-essence-recognizer-v0.7.0-windows.zip",
-    "hash": "e8eb4d32227eefcf37e3fc209e334adc0b08432951fbb6a78f74f8635ef522d6",
+    "url": "https://github.com/Logical-Byte/endfield-essence-recognizer/releases/download/v0.8.0/endfield-essence-recognizer-v0.8.0-windows.zip",
+    "hash": "5d490709101641fa7955269af1e146c3ae7b39a411542e6cd7eff3262154b4f4",
     "shortcuts": [
         [
             "endfield-essence-recognizer.exe",

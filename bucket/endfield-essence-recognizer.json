@@ -12,7 +12,9 @@
         ]
     ],
     "persist": "config.json",
-    "pre_install": "New-Item -Path (Join-Path -Path $dir -ChildPath config.json) -ItemType File -ErrorAction SilentlyContinue | Out-Null",
+    "pre_install": [
+        "if (!(Test-Path (Join-Path $dir 'config.json'))) { '{\"version\": 3}' | Set-Content -Path (Join-Path $dir 'config.json') -Encoding Ascii }"
+    ],
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Logical-Byte/endfield-essence-recognizer/releases/download/v$version/endfield-essence-recognizer-v$version-windows.zip"

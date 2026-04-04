@@ -1,0 +1,18 @@
+{
+    "version": "2.29.0",
+    "description": "Just Another Skin Manager",
+    "homepage": "https://github.com/Moonholder/JASM",
+    "license": "AGPL-3.0",
+    "url": "https://github.com/Moonholder/JASM/releases/download/v2.29.0/JASM_v2.29.0.7z",
+    "hash": "febecaf3dd0c088bfba02df348cfaf0aacb9bfbaee580d2a4d0d0b3af0a51f96",
+    "shortcuts": [
+        [
+            "JASM/JASM - Just Another Skin Manager.exe",
+            "Just Another Skin Manager"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Moonholder/JASM/releases/download/v$version/JASM_v$version.7z"
+    }
+}

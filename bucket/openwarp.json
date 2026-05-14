@@ -1,0 +1,27 @@
+{
+    "version": "0.2026.05.13.1008",
+    "description": "OpenWarp is a free version of the open source client based on warp",
+    "homepage": "https://github.com/zerx-lab/warp",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zerx-lab/warp/releases/download/v0.2026.05.13.1008/OpenWarpSetup.exe",
+            "hash": "f173afeb750a120ced4944e23607cc7280095dd69728d065a84764900fff4c90"
+        }
+    },
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "warp-terminal.exe",
+            "OpenWarp"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zerx-lab/warp/releases/download/v$version/OpenWarpSetup.exe"
+            }
+        }
+    }
+}

@@ -1,10 +1,10 @@
 {
-    "version": "1.3.3",
+    "version": "1.4.0",
     "description": "鸣潮助手，主要功能有获取角色信息，解锁帧率，实现库街区签到，游戏时长统计以及抽卡分析(支持国际服账号)。",
     "homepage": "https://github.com/leck995/WutheringWavesTool",
     "license": "Unknown",
-    "url": "https://github.com/leck995/WutheringWavesTool/releases/download/1.3.3/WutheringWavesTool-windows-x64-1.3.3.zip",
-    "hash": "a032f552c9724d6589ba193ecb116e8cbc3118f710201acb1c7fd8e0b4b5f29b",
+    "url": "https://github.com/leck995/WutheringWavesTool/releases/download/1.4.0/WutheringWavesTool-windows-x64-1.4.0.zip",
+    "hash": "51760509c086a63988349541649e3e547ddc44af788dab31affd7a87a0022c73",
     "shortcuts": [
         [
             "WutheringWavesTool.exe",

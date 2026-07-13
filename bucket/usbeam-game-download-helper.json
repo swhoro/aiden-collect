@@ -1,16 +1,16 @@
 {
-    "version": "20260412",
+    "version": "20260713",
     "description": "A helper tool for downloading games (UsbEAm Game Download Helper).",
     "homepage": "https://www.dogfight360.com/blog/19189/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://www.dogfight360.com/blog/wp-content/uploads/2026/04/UsbEAm%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B_260412_amd64.zip",
-            "hash": "5e2d695f23d1844823a995c66eb3a34f70520c48ed3f2f6d2af46a895774c84d"
+            "url": "https://www.dogfight360.com/blog/wp-content/uploads/2026/07/UsbEAm%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B_260713_amd64.zip",
+            "hash": "704562472fec766f8c4673b998a2c52b2402df0e761e5c7a4101f0d0d43860ed"
         },
         "arm64": {
-            "url": "https://www.dogfight360.com/blog/wp-content/uploads/2026/04/UsbEAm%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B_260412_arm64.zip",
-            "hash": "393ff41db0ec4620c82023d9aa766e904ae09e0a9c6d9bfada422b07918a10d8"
+            "url": "https://www.dogfight360.com/blog/wp-content/uploads/2026/07/UsbEAm%E6%B8%B8%E6%88%8F%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B_260713_arm64.zip",
+            "hash": "878ff5786ebfdb5d2ed0dce0d450294d2524b2991d1e9a2e1912b577db99ddd0"
         }
     },
     "bin": "UsbEAm游戏下载助手.exe",

@@ -1,16 +1,16 @@
 {
-    "version": "3.0.1",
+    "version": "3.0.3",
     "description": "Access your computer from anywhere. DnsTube is a Windows .NET dynamic DNS client for Cloudflare.",
     "homepage": "https://github.com/drittich/DnsTube",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/drittich/DnsTube/releases/download/v3.0.1/DnsTube-v3.0.1-win-x64.7z",
-            "hash": "3def568dfe0129bd7d817c26ffb803170e4b76258052a07a06c7b9b8755223b5"
+            "url": "https://github.com/drittich/DnsTube/releases/download/v3.0.3/DnsTube-v3.0.3-win-x64.7z",
+            "hash": "700d15645328bc0a662cd24603bb0146cc49261fc729ae133754ea5c9556c3cf"
         },
         "32bit": {
-            "url": "https://github.com/drittich/DnsTube/releases/download/v3.0.1/DnsTube-v3.0.1-win-x86.7z",
-            "hash": "18566c144f67c6f75fa32a4db0e37ddbddf2b26ae11b37dc0e033c97f88aa7a9"
+            "url": "https://github.com/drittich/DnsTube/releases/download/v3.0.3/DnsTube-v3.0.3-win-x86.7z",
+            "hash": "d888e28a312e8c88fc06e655b626413aef9a3365debe797a5e48519e0b730695"
         }
     },
     "shortcuts": [

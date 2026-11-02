@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "description": "Lilt is a native third-party QQ Music desktop client.",
+    "homepage": "https://github.com/Amamiya23/mygo-qyin",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Amamiya23/mygo-qyin/releases/download/v0.2.0/lilt-0.2.0-windows-amd64.tar.gz",
+            "hash": "b8d66d33316ab402fee576c5246e206ba38aefd81b8574ea0daad87472e453d5"
+        },
+        "arm64": {
+            "url": "https://github.com/Amamiya23/mygo-qyin/releases/download/v0.2.0/lilt-0.2.0-windows-arm64.tar.gz",
+            "hash": "69f62fd180c623ec4a9b358803a5a46c05d9a1d29244f1997220b67e09ecc301"
+        }
+    },
+    "shortcuts": [
+        [
+            "Lilt.exe",
+            "Lilt"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Amamiya23/mygo-qyin/releases/download/v$version/lilt-$version-windows-amd64.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/Amamiya23/mygo-qyin/releases/download/v$version/lilt-$version-windows-arm64.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

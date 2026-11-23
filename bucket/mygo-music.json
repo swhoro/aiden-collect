@@ -1,0 +1,65 @@
+{
+    "version": "0.1.25",
+    "description": "A native desktop music player written in Go with MyGo, no WebView.",
+    "homepage": "https://github.com/egoist/mygo-music",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/egoist/mygo-music/releases/download/v0.1.25/mygo-music-0.1.25-windows-amd64.tar.gz",
+            "hash": "21e8ce842db1f1d20b008080a77f5963e028555d10f358a486fddc93cabbe92d"
+        },
+        "arm64": {
+            "url": "https://github.com/egoist/mygo-music/releases/download/v0.1.25/mygo-music-0.1.25-windows-arm64.tar.gz",
+            "hash": "f87541a9720a8a0a58e38c96a3fe31a9de4833eaba90d0d6f79d36377cc3ebda"
+        }
+    },
+    "post_install": [
+        "$userDataDir = \"$env:APPDATA\\MyGo Music\"",
+        "if (Test-Path -LiteralPath $userDataDir) {",
+        "    if ((Get-Item -LiteralPath $userDataDir -Force).LinkType) {",
+        "        (Get-Item -LiteralPath $userDataDir -Force).Delete()",
+        "    } else {",
+        "        Write-Host 'Migrating existing MyGo Music user data to Scoop persist directory...'",
+        "        Get-ChildItem -LiteralPath $userDataDir -Force | Copy-Item -Destination \"$persist_dir\\data\" -Recurse -Force",
+        "        Remove-Item -LiteralPath $userDataDir -Recurse -Force",
+        "    }",
+        "}",
+        "New-Item -ItemType Junction -Path $userDataDir -Target \"$persist_dir\\data\" | Out-Null",
+        "$exe = \"$(appdir mygo-music $global)\\current\\MyGo Music.exe\"",
+        "$regKey = 'HKCU:\\Software\\Classes\\mygo-music'",
+        "New-Item -Path $regKey -Value 'URL:MyGo Music' -Force | Out-Null",
+        "New-ItemProperty -Path $regKey -Name 'URL Protocol' -Value '' -PropertyType String -Force | Out-Null",
+        "New-Item -Path \"$regKey\\DefaultIcon\" -Value \"`\"$exe`\",0\" -Force | Out-Null",
+        "New-Item -Path \"$regKey\\shell\\open\\command\" -Value \"`\"$exe`\" `\"%1`\"\" -Force | Out-Null"
+    ],
+    "uninstaller": {
+        "script": [
+            "$userDataDir = \"$env:APPDATA\\MyGo Music\"",
+            "if ((Test-Path -LiteralPath $userDataDir) -and (Get-Item -LiteralPath $userDataDir -Force).LinkType) {",
+            "    (Get-Item -LiteralPath $userDataDir -Force).Delete()",
+            "}",
+            "Remove-Item -Path 'HKCU:\\Software\\Classes\\mygo-music' -Recurse -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "shortcuts": [
+        [
+            "MyGo Music.exe",
+            "MyGo Music"
+        ]
+    ],
+    "persist": "data",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/egoist/mygo-music/releases/download/v$version/mygo-music-$version-windows-amd64.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/egoist/mygo-music/releases/download/v$version/mygo-music-$version-windows-arm64.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

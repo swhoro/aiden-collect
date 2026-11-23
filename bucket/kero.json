@@ -1,0 +1,98 @@
+{
+    "version": "2.1.36",
+    "description": "A terminal for coding agents, powered by Ghostty.",
+    "homepage": "https://github.com/egoist/kero",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/egoist/kero/releases/download/v2.1.36/kero-2.1.36-windows-amd64.tar.gz",
+            "hash": "8cef48e32d9e565ed4d4da2b965772819d790b7ae44836a65b1602a17f0211d4"
+        },
+        "arm64": {
+            "url": "https://github.com/egoist/kero/releases/download/v2.1.36/kero-2.1.36-windows-arm64.tar.gz",
+            "hash": "d151ff0b704738a869b5d2558019c5e12f39688393b67e6a96c2d0d9396abf9a"
+        }
+    },
+    "pre_install": [
+        "Copy-Item -LiteralPath \"$dir\\Kero.exe\" -Destination \"$dir\\kero-cli.exe\"",
+        "Set-PESubsystem \"$dir\\kero-cli.exe\" 3 | Out-Null"
+    ],
+    "post_install": [
+        "$dataDir = \"$env:APPDATA\\kero\"",
+        "if (Test-Path -LiteralPath $dataDir) {",
+        "    if ((Get-Item -LiteralPath $dataDir -Force).LinkType) {",
+        "        (Get-Item -LiteralPath $dataDir -Force).Delete()",
+        "    } else {",
+        "        Write-Host 'Migrating existing Kero data to Scoop persist directory...'",
+        "        Get-ChildItem -LiteralPath $dataDir -Force | Copy-Item -Destination \"$persist_dir\\data\" -Recurse -Force",
+        "        Remove-Item -LiteralPath $dataDir -Recurse -Force",
+        "    }",
+        "}",
+        "New-Item -ItemType Junction -Path $dataDir -Target \"$persist_dir\\data\" | Out-Null",
+        "$configBase = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { \"$env:USERPROFILE\\.config\" }",
+        "$configDir = Join-Path $configBase 'kero'",
+        "if (Test-Path -LiteralPath $configDir) {",
+        "    if ((Get-Item -LiteralPath $configDir -Force).LinkType) {",
+        "        (Get-Item -LiteralPath $configDir -Force).Delete()",
+        "    } else {",
+        "        Write-Host 'Migrating existing Kero config to Scoop persist directory...'",
+        "        Get-ChildItem -LiteralPath $configDir -Force | Copy-Item -Destination \"$persist_dir\\config\" -Recurse -Force",
+        "        Remove-Item -LiteralPath $configDir -Recurse -Force",
+        "    }",
+        "} else {",
+        "    ensure $configBase | Out-Null",
+        "}",
+        "New-Item -ItemType Junction -Path $configDir -Target \"$persist_dir\\config\" | Out-Null"
+    ],
+    "pre_uninstall": [
+        "if ($cmd -eq 'uninstall' -and (Test-Path -LiteralPath \"$dir\\kero-cli.exe\")) {",
+        "    & \"$dir\\kero-cli.exe\" daemon uninstall-service 2>$null | Out-Null",
+        "}",
+        "if (Test-Path -LiteralPath \"$dir\\kero-cli.exe\") {",
+        "    & \"$dir\\kero-cli.exe\" daemon stop 2>$null | Out-Null",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "$dataDir = \"$env:APPDATA\\kero\"",
+            "if ((Test-Path -LiteralPath $dataDir) -and (Get-Item -LiteralPath $dataDir -Force).LinkType) {",
+            "    (Get-Item -LiteralPath $dataDir -Force).Delete()",
+            "}",
+            "$configBase = if ($env:XDG_CONFIG_HOME) { $env:XDG_CONFIG_HOME } else { \"$env:USERPROFILE\\.config\" }",
+            "$configDir = Join-Path $configBase 'kero'",
+            "if ((Test-Path -LiteralPath $configDir) -and (Get-Item -LiteralPath $configDir -Force).LinkType) {",
+            "    (Get-Item -LiteralPath $configDir -Force).Delete()",
+            "}"
+        ]
+    },
+    "bin": [
+        [
+            "kero-cli.exe",
+            "kero"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Kero.exe",
+            "Kero"
+        ]
+    ],
+    "persist": [
+        "data",
+        "config"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/egoist/kero/releases/download/v$version/kero-$version-windows-amd64.tar.gz"
+            },
+            "arm64": {
+                "url": "https://github.com/egoist/kero/releases/download/v$version/kero-$version-windows-arm64.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}
